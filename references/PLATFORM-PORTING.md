@@ -83,14 +83,7 @@
 
 ## 泛化策略
 
-现在建议采用“两套技能”的结构：
-
-- `gemini-draw`
-  - 专门承载 Gemini
-- `browser-media-studio`
-  - 统一承载其他非 Gemini 的网页登录型生成平台
-
-在 `browser-media-studio` 内部，再把平台差异放到 provider 配置或说明里：
+如果以后要把这套模式迁移到其他网页登录型生成平台，建议保留一套共享 runtime，把平台差异收敛到各自的 provider 配置或说明里：
 
 - URL
 - selectors
@@ -98,22 +91,15 @@
 - download signals
 - audit rules
 
-这样既保住一套共享 runtime，又不会把未来维护拆成很多零散小技能。
+这样可以保持一套稳定 runtime，同时把平台差异隔离在薄薄的一层配置中。
 
 ## 推荐的未来形态
 
-1. `gemini-draw`
-   - 稳定的 Gemini 专用实现
-   - 独立 CLI
-   - OpenClaw skill
-
-2. `browser-media-studio`
-   - Jimeng / Kling / Hailuo 以及未来其他网页登录型平台的统一骨架
-   - 每个平台各自维护登录说明、selectors 和审计规则
-   - 既能作为独立 CLI，也能作为 OpenClaw skill
+1. 保留 `gemini-draw` 作为稳定的 Gemini 专用实现
+2. 如果扩展到其他平台，再在同一套浏览器生成架构上增加 provider 适配层
 
 这样做的好处是：
 
-- Gemini 维持稳定不被牵连
-- 其他平台有一个统一可扩展的家
-- 后续新增平台时不需要再复制出一整套新技能
+- Gemini 主链保持稳定
+- 其他平台可以沿用已验证过的登录、运行、下载和审计模式
+- 不需要为每个平台从零再造一整套浏览器自动化架构

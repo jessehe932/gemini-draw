@@ -1,7 +1,5 @@
 # gemini-draw Skill — 调用契约
 
-> 当前定位：这是可公开 GitHub 版本的本地克隆种子，后续会继续移除本地专有约束。
-
 ## 触发方式
 
 用户在日常对话中，使用以下任意自然语言指令即可稳定触发：
@@ -37,7 +35,7 @@
 ## 依赖条件
 
 1. 独立 profile 已完成首次登录授权（仅需一次）
-2. 如果本地网络环境需要代理，可通过环境变量 `GEMINI_DRAW_PROXY_SERVER` 提供
+2. 如果网络环境需要代理，可通过环境变量 `GEMINI_DRAW_PROXY_SERVER` 提供
 3. 正式入口：`scripts/gemini_draw.py`
 4. E2E 验收入口：`tests/test_integration.py`
 

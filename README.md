@@ -1,7 +1,5 @@
 # gemini-draw
 
-> 当前定位：这是可公开 GitHub 版本的本地克隆种子。后续会继续剔除本地专有内容，再整理成适合发布的技能或 CLI 仓库。
-
 `gemini-draw` 是一个 Gemini 后台生图工具，可以作为两种形态使用：
 
 - OpenClaw 技能
@@ -168,10 +166,10 @@ python3 tests/test_integration.py --prompt "一只穿宇航服的柴犬，电影
 
 也可以通过 `--output-dir` 覆盖。
 
-如果你的网络环境需要代理，也可以通过环境变量传入，例如：
+如果你的网络环境需要代理，也可以通过环境变量传入。例如 Gemini 在某些地区或网络环境下需要代理访问：
 
 ```bash
-GEMINI_DRAW_PROXY_SERVER=http://127.0.0.1:7897 gemini-draw --prompt "一只穿宇航服的柴犬，电影感，高清"
+GEMINI_DRAW_PROXY_SERVER=http://your-proxy-host:port gemini-draw --prompt "一只穿宇航服的柴犬，电影感，高清"
 ```
 
 ## 关键文件
