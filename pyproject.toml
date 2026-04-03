@@ -12,6 +12,10 @@ dependencies = [
   "playwright>=1.50",
 ]
 
+[project.urls]
+Homepage = "https://github.com/jessehe932/gemini-draw"
+Repository = "https://github.com/jessehe932/gemini-draw"
+
 [project.scripts]
 gemini-draw = "gemini_draw.cli:main"
 gemini-draw-login = "gemini_draw.login_init:main"

@@ -51,7 +51,7 @@
 步骤 1：把仓库克隆到 OpenClaw 的 skills 目录
 
 ```bash
-git clone <your-github-repo-url> ~/.openclaw/workspace/skills/gemini-draw
+git clone https://github.com/jessehe932/gemini-draw.git ~/.openclaw/workspace/skills/gemini-draw
 ```
 
 步骤 2：进入技能目录
@@ -84,7 +84,7 @@ playwright install chromium
 步骤 1：把仓库克隆到本地任意目录
 
 ```bash
-git clone <your-github-repo-url> gemini-draw
+git clone https://github.com/jessehe932/gemini-draw.git gemini-draw
 ```
 
 步骤 2：进入项目目录
@@ -126,7 +126,7 @@ gemini-draw --prompt "一只穿宇航服的柴犬，电影感，高清"
 
 如果你只想最快跑起来，推荐走独立 CLI：
 
-1. `git clone <your-github-repo-url> gemini-draw`
+1. `git clone https://github.com/jessehe932/gemini-draw.git gemini-draw`
 2. `cd gemini-draw`
 3. `pip install -e .`
 4. `playwright install chromium`
