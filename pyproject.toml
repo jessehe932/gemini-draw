@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gemini-draw"
+version = "0.1.0"
+description = "Background Gemini image generation with isolated Chrome profile and file-audited download"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "playwright>=1.50",
+]
+
+[project.scripts]
+gemini-draw = "gemini_draw.cli:main"
+gemini-draw-login = "gemini_draw.login_init:main"
